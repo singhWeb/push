@@ -2,7 +2,6 @@ const express = require("express");
 const axios = require("axios");
 
 const app = express();
-const port = process.env.PORT || 3000;
 
 // Replace this URL with your Google Apps Script URL
 const googleAppsScriptUrl =
@@ -35,6 +34,8 @@ app.get("/send-data", async (req, res) => {
   }
 });
 
+// Start the server
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
