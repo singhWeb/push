@@ -4,7 +4,9 @@ const axios = require("axios");
 const app = express();
 
 // Replace this URL with your Google Apps Script URL
+const corsProxyUrl = "https://cors-anywhere.herokuapp.com/";
 const googleAppsScriptUrl =
+  corsProxyUrl +
   "https://script.google.com/macros/s/AKfycbxT-SGKuFZm5BhUZeMJmwraTGvnLIIHZKWzPUqgcWLA281XzqPfilGBsbBD0kpA6tXB/exec";
 
 // Endpoint to receive data from your device
