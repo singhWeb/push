@@ -10,6 +10,7 @@ const googleAppsScriptUrl =
 
 // Endpoint to receive data from your device
 app.get("/send-data", async (req, res) => {
+  console.log("Received data:", req.query);
     try {
         // Extract data from the query parameters (latitude, longitude, weight)
         const { latitude, longitude, weight } = req.query;
